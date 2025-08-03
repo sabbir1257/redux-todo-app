@@ -16,8 +16,11 @@ const todoSlice = createSlice({
     removeTodo: (state, action) => {
       return state.filter((todo) => todo.id !== action.payload);
     },
+    loadFromStorage: (state, action) => {
+      state.push(action.payload); // ✅ Load individual todo into state
+    },
   },
 });
 
-export const { addTodo, toggleTodo, removeTodo } = todoSlice.actions;
+export const { addTodo, toggleTodo, removeTodo, loadFromStorage } = todoSlice.actions;
 export default todoSlice.reducer;

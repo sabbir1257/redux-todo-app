@@ -38,6 +38,11 @@ const Todo = () => {
     }
   };
 
+  const handleEditTodo = (todo) => {
+    setText(todo.text);
+    setEditId(todo.id);
+  };
+
   return (
     <>
       <div className="flex flex-col items-center py-10 min-h-screen bg-gray-100">
@@ -80,7 +85,7 @@ const Todo = () => {
                   </div>
                   <div className="flex space-x-3">
                     <button
-                      onClick={() => handleAddTodo(todo)}
+                      onClick={() => handleEditTodo(todo)}
                       className="px-3 py-1 bg-yellow-400 text-white rounded-lg hover:bg-yellow-500"
                     >
                       Edit
