@@ -1,11 +1,12 @@
-import './App.css'
+import './App.css';
+import Todo from './Todo';
 
 function App() {
   return (
     <>
-    <h1 className='text-center bg-red-700'>To Do Application</h1>
+      <Todo />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
